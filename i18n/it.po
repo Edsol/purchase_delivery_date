@@ -1,0 +1,8 @@
+#. module: purchase_delivery_date
+#: model:ir.ui.view,arch_db:purchase_delivery_date.delivery_date
+msgid "Delivery date"
+msgstr "Data consegna"
+
+#. module: purchase_delivery_date
+msgid "To confirm the order you have to indicate the delivery date."
+msgstr "Per confermare l'ordine devi indicare una data di consegna."
