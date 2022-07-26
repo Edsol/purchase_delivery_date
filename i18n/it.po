@@ -1,8 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* purchase_delivery_date
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20190816\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-26 12:55+0000\n"
+"PO-Revision-Date: 2022-07-26 12:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
 #. module: purchase_delivery_date
-#: model:ir.ui.view,arch_db:purchase_delivery_date.delivery_date
+#: model:ir.model.fields,field_description:purchase_delivery_date.field_purchase_order_delivery_date
+#: model:ir.ui.view,arch_db:purchase_delivery_date.view_purchase_order_form
 msgid "Delivery date"
 msgstr "Data consegna"
 
 #. module: purchase_delivery_date
+#: model:ir.model,name:purchase_delivery_date.model_purchase_order
+msgid "Purchase Order"
+msgstr "Ordine di Acquisto"
+
+#. module: purchase_delivery_date
+#: code:addons/purchase_delivery_date/models/models.py:14
+#, python-format
 msgid "To confirm the order you have to indicate the delivery date."
 msgstr "Per confermare l'ordine devi indicare una data di consegna."

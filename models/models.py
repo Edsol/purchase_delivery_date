@@ -11,6 +11,6 @@ class PurchaseOrder(models.Model):
     def button_confirm(self):
         for order in self:
             if order.delivery_date == False:
-                raise exceptions.Warning(_("To confirm the order you have to indicate the delivery date."))
+                raise exceptions.UserError(_("To confirm the order you have to indicate the delivery date."))
             else:
                 super(PurchaseOrder,self).button_confirm()
