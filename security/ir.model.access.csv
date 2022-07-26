@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_purchase_delivery_date_purchase_delivery_date,purchase_delivery_date.purchase_delivery_date,model_purchase_delivery_date_purchase_delivery_date,,1,0,0,0
