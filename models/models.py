@@ -19,16 +19,12 @@ class PurchaseOrder(models.Model):
     
     @api.multi
     def write(self, vals):
-        if 'delivery_date' not in vals:
-            res = super(PurchaseOrder, self).write(vals)
-            return res
-        
-        if vals['delivery_date'] != False:
-                date_order = fields.Date.from_string(self.date_order)
-                delivery_date = fields.Date.from_string(vals['delivery_date'])
+        if 'delivery_date' in vals and vals['delivery_date']:
+            date_order = fields.Date.from_string(self.date_order)
+            delivery_date = fields.Date.from_string(vals['delivery_date'])
 
-                if (delivery_date > date_order) == False:
-                    raise exceptions.UserError(_("A delivery date prior to or equal to the order date cannot be entered."))
-                    
+            if (delivery_date > date_order) == False:
+                raise exceptions.UserError(_("A delivery date prior to or equal to the order date cannot be entered."))
+
         res = super(PurchaseOrder, self).write(vals)
         return res
