@@ -4,19 +4,11 @@ from odoo import models, fields, api, exceptions, _
 import logging
 _logger = logging.getLogger(__name__)
 
-class PurchaseOrder(models.Model):
-    _inherit = "purchase.order"
+class PurchaseOrderLine(models.Model):
+    _inherit = "purchase.order.line"
 
     delivery_date = fields.Date(string='Delivery date', required=False)
 
-    @api.multi
-    def button_confirm(self):
-        for order in self:
-            if order.delivery_date == False:
-                raise exceptions.UserError(_("To confirm the order you have to indicate the delivery date."))
-            else:
-                super(PurchaseOrder,self).button_confirm()
-    
     @api.multi
     def write(self, vals):
         if 'delivery_date' in vals and vals['delivery_date']:
@@ -25,6 +17,6 @@ class PurchaseOrder(models.Model):
 
             if (delivery_date > date_order) == False:
                 raise exceptions.UserError(_("A delivery date prior to or equal to the order date cannot be entered."))
-
-        res = super(PurchaseOrder, self).write(vals)
+        
+        res = super(PurchaseOrderLine, self).write(vals)
         return res

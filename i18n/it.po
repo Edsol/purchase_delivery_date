@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0-20190816\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-27 08:40+0000\n"
-"PO-Revision-Date: 2022-07-27 08:40+0000\n"
+"POT-Creation-Date: 2022-07-28 13:07+0000\n"
+"PO-Revision-Date: 2022-07-28 13:07+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,18 +16,31 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: purchase_delivery_date
-#: model:ir.ui.view,arch_db:purchase_delivery_date.view_purchase_order_delivery_time
+#: model:ir.ui.view,arch_db:purchase_delivery_date.delivery_time_purchaseorder_document
 msgid "<strong>Delivery date:</strong>"
 msgstr "<strong>Data consegna:</strong>"
 
 #. module: purchase_delivery_date
-#: code:addons/purchase_delivery_date/models/models.py:27
+#: model:ir.ui.view,arch_db:purchase_delivery_date.delivery_time_purchaseorder_document
+msgid "<strong>Delivery date</strong>"
+msgstr "<strong>Data consegna</strong>"
+
+#. module: purchase_delivery_date
+#: code:addons/purchase_delivery_date/models/purchase_order.py:22
+#: code:addons/purchase_delivery_date/models/purchase_order_line.py:19
 #, python-format
 msgid "A delivery date prior to or equal to the order date cannot be entered."
 msgstr "Non è possibile inserire una data di consegna precedente o uguale alla data dell'ordine."
 
 #. module: purchase_delivery_date
+#: code:addons/purchase_delivery_date/models/purchase_order.py:17
+#, python-format
+msgid "All order lines must have a delivery date"
+msgstr "Tutte le righe d'ordine devono avere una data di consegna"
+
+#. module: purchase_delivery_date
 #: model:ir.model.fields,field_description:purchase_delivery_date.field_purchase_order_delivery_date
+#: model:ir.model.fields,field_description:purchase_delivery_date.field_purchase_order_line_delivery_date
 #: model:ir.ui.view,arch_db:purchase_delivery_date.view_purchase_order_form
 msgid "Delivery date"
 msgstr "Data consegna"
@@ -38,7 +51,6 @@ msgid "Purchase Order"
 msgstr "Ordine di Acquisto"
 
 #. module: purchase_delivery_date
-#: code:addons/purchase_delivery_date/models/models.py:16
-#, python-format
-msgid "To confirm the order you have to indicate the delivery date."
-msgstr "Per confermare l'ordine devi indicare una data di consegna."
+#: model:ir.model,name:purchase_delivery_date.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Riga Ordine d'Acquisto"

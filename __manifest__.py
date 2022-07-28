@@ -12,7 +12,7 @@
     'depends': ["purchase"],
     'data': [
         "views/purchase_order_view.xml",
-        "report/report_purchaseorder_document.xml",
+        'report/report_purchaseorder_document.xml'
     ],
     'license': 'AGPL-3',
     'installable': True,

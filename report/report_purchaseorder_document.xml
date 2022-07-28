@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="view_purchase_order_delivery_time" inherit_id="purchase.report_purchaseorder_document">
+    <template id="delivery_time_purchaseorder_document" inherit_id="purchase.report_purchaseorder_document">
         <xpath expr="//div[@t-if='o.date_order']" position="after">
             <div t-if="o.delivery_date" class="col-xs-3">
                 <strong>Delivery date:</strong>
                 <p t-field="o.delivery_date"/>
             </div>
+        </xpath>
+        <xpath expr="//table[1]/thead/tr[1]/th[1]" position="after">
+            <th><strong>Delivery date</strong></th>
+        </xpath>
+        <xpath expr="//table[1]/tbody/tr[1]/td[1]" position="after">
+            <td><span t-field="line.delivery_date"/></td>
         </xpath>
     </template>
 </odoo>
