@@ -15,7 +15,7 @@ class PurchaseOrderLine(models.Model):
             date_order = fields.Date.from_string(self.date_order)
             delivery_date = fields.Date.from_string(vals['delivery_date'])
             if (delivery_date >= date_order) == False:
-                raise exceptions.UserError(_("A delivery date prior to or equal to the order date cannot be entered."))
+                raise exceptions.UserError(_("It is not possible to enter a delivery date earlier than the order date."))
         
         res = super(PurchaseOrderLine, self).write(vals)
         return res

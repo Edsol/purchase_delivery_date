@@ -29,8 +29,8 @@ msgstr "<strong>Data consegna</strong>"
 #: code:addons/purchase_delivery_date/models/purchase_order.py:22
 #: code:addons/purchase_delivery_date/models/purchase_order_line.py:19
 #, python-format
-msgid "A delivery date prior to or equal to the order date cannot be entered."
-msgstr "Non è possibile inserire una data di consegna precedente o uguale alla data dell'ordine."
+msgid "It is not possible to enter a delivery date earlier than the order date."
+msgstr "Non è possibile inserire una data di consegna precedente alla data dell'ordine."
 
 #. module: purchase_delivery_date
 #: code:addons/purchase_delivery_date/models/purchase_order.py:17
